@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:docs.browser-use.com)",
+      "WebFetch(domain:github.com)",
+      "WebSearch",
+      "WebFetch(domain:www.stats.gov.cn)",
+      "WebFetch(domain:www.zgtjnj.org)",
+      "WebFetch(domain:www.tjnj.net)",
+      "WebFetch(domain:library.bnuzh.edu.cn)"
+    ]
+  }
+}
