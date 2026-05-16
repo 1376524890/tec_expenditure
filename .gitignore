@@ -8,3 +8,14 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Large data files (archived versions)
+data/firm_panel_v2.csv
+data/firm_panel_v2.xlsx
+
+# Output files (regenerated on each run)
+outputs/*.csv
+outputs/*.json
+outputs/*.txt
+outputs/*.md
+!outputs/final/
