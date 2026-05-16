@@ -1,0 +1,1780 @@
+
+====================================================================================================
+[2017_2024] M1: ln_invention_apply ~ manufacturing_post2021 + controls + FE
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0007
+Estimator:                   PanelOLS   R-squared (Between):             -0.0192
+No. Observations:               37694   R-squared (Within):               0.0007
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0063
+Time:                        00:24:01   Log-likelihood                -3.762e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      5.8853
+Entities:                        5713   P-value                           0.0001
+Avg Obs:                       6.5979   Distribution:                 F(4,31970)
+Min Obs:                       1.0000                                           
+Max Obs:                       8.0000   F-statistic (robust):             3.0422
+                                        P-value                           0.0162
+Time periods:                       8   Distribution:                 F(4,31970)
+Avg Obs:                       4711.8                                           
+Min Obs:                       3826.0                                           
+Max Obs:                       5484.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.7190     0.3777    -1.9037     0.0570     -1.4593      0.0213
+manufacturing_post2021    -0.0409     0.0221    -1.8498     0.0643     -0.0843      0.0024
+ln_assets                  0.0532     0.0170     3.1200     0.0018      0.0198      0.0866
+roa                       -0.0161     0.0682    -0.2361     0.8133     -0.1499      0.1177
+cashflow_ratio            -0.0514     0.0729    -0.7049     0.4809     -0.1942      0.0915
+==========================================================================================
+
+F-test for Poolability: 11.496
+P-value: 0.0000
+Distribution: F(5719,31970)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2024] M1b: 基准 + post2023 控制 (2023+ 全行业100%加计扣除)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0007
+Estimator:                   PanelOLS   R-squared (Between):             -0.0192
+No. Observations:               37694   R-squared (Within):               0.0007
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0063
+Time:                        00:24:01   Log-likelihood                -3.762e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      5.8853
+Entities:                        5713   P-value                           0.0001
+Avg Obs:                       6.5979   Distribution:                 F(4,31970)
+Min Obs:                       1.0000                                           
+Max Obs:                       8.0000   F-statistic (robust):             3.0422
+                                        P-value                           0.0162
+Time periods:                       8   Distribution:                 F(4,31970)
+Avg Obs:                       4711.8                                           
+Min Obs:                       3826.0                                           
+Max Obs:                       5484.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.7190     0.3777    -1.9037     0.0570     -1.4593      0.0213
+manufacturing_post2021    -0.0409     0.0221    -1.8498     0.0643     -0.0843      0.0024
+ln_assets                  0.0532     0.0170     3.1200     0.0018      0.0198      0.0866
+roa                       -0.0161     0.0682    -0.2361     0.8133     -0.1499      0.1177
+cashflow_ratio            -0.0514     0.0729    -0.7049     0.4809     -0.1942      0.0915
+==========================================================================================
+
+F-test for Poolability: 11.496
+P-value: 0.0000
+Distribution: F(5719,31970)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2024] P1: DID + DID×省财政科技支出占比 + 省财政占比 (连续交互)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0008
+Estimator:                   PanelOLS   R-squared (Between):             -0.0194
+No. Observations:               36569   R-squared (Within):               0.0007
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0074
+Time:                        00:24:02   Log-likelihood                -3.697e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      3.9414
+Entities:                        5620   P-value                           0.0006
+Avg Obs:                       6.5069   Distribution:                 F(6,30936)
+Min Obs:                       1.0000                                           
+Max Obs:                       8.0000   F-statistic (robust):             2.0258
+                                        P-value                           0.0586
+Time periods:                       8   Distribution:                 F(6,30936)
+Avg Obs:                       4571.1                                           
+Min Obs:                       3666.0                                           
+Max Obs:                       5400.0                                           
+                                                                                
+                                    Parameter Estimates                                    
+===========================================================================================
+                         Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+-------------------------------------------------------------------------------------------
+Intercept                  -0.7139     0.3914    -1.8239     0.0682     -1.4811      0.0533
+manufacturing_post2021     -0.0487     0.0450    -1.0837     0.2785     -0.1369      0.0394
+did_x_prov_sci_tech         0.0006     0.0096     0.0660     0.9474     -0.0181      0.0194
+ln_assets                   0.0536     0.0176     3.0395     0.0024      0.0190      0.0882
+roa                        -0.0128     0.0698    -0.1837     0.8542     -0.1496      0.1240
+cashflow_ratio             -0.0529     0.0760    -0.6968     0.4859     -0.2018      0.0960
+province_sci_tech_ratio    -0.0005     0.0118    -0.0450     0.9641     -0.0238      0.0227
+===========================================================================================
+
+F-test for Poolability: 11.155
+P-value: 0.0000
+Distribution: F(5626,30936)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2024] P2: DID + DID×省R&D强度 + 省R&D强度 (连续交互)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0008
+Estimator:                   PanelOLS   R-squared (Between):             -0.0135
+No. Observations:               35636   R-squared (Within):               0.0012
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0042
+Time:                        00:24:02   Log-likelihood                -3.608e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      3.8318
+Entities:                        5620   P-value                           0.0008
+Avg Obs:                       6.3409   Distribution:                 F(6,30003)
+Min Obs:                       1.0000                                           
+Max Obs:                       8.0000   F-statistic (robust):             2.0685
+                                        P-value                           0.0534
+Time periods:                       8   Distribution:                 F(6,30003)
+Avg Obs:                       4454.5                                           
+Min Obs:                       3666.0                                           
+Max Obs:                       5400.0                                           
+                                                                                
+                                    Parameter Estimates                                    
+===========================================================================================
+                         Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+-------------------------------------------------------------------------------------------
+Intercept                  -0.7494     0.4001    -1.8729     0.0611     -1.5337      0.0349
+manufacturing_post2021     -0.0323     0.0514    -0.6295     0.5290     -0.1330      0.0683
+did_x_prov_rd_intensity    -0.0042     0.0164    -0.2528     0.8004     -0.0363      0.0280
+ln_assets                   0.0523     0.0180     2.9088     0.0036      0.0171      0.0875
+roa                        -0.0068     0.0702    -0.0971     0.9226     -0.1443      0.1307
+cashflow_ratio             -0.0620     0.0771    -0.8051     0.4208     -0.2131      0.0890
+province_rd_intensity       0.0220     0.0252     0.8726     0.3829     -0.0274      0.0713
+===========================================================================================
+
+F-test for Poolability: 10.758
+P-value: 0.0000
+Distribution: F(5626,30003)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2024] P3: DID + DID×ln(省财政科技支出) + ln(省财政科技支出)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0008
+Estimator:                   PanelOLS   R-squared (Between):             -0.0187
+No. Observations:               36569   R-squared (Within):               0.0007
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0069
+Time:                        00:24:03   Log-likelihood                -3.697e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      4.0099
+Entities:                        5620   P-value                           0.0005
+Avg Obs:                       6.5069   Distribution:                 F(6,30936)
+Min Obs:                       1.0000                                           
+Max Obs:                       8.0000   F-statistic (robust):             2.0544
+                                        P-value                           0.0551
+Time periods:                       8   Distribution:                 F(6,30936)
+Avg Obs:                       4571.1                                           
+Min Obs:                       3666.0                                           
+Max Obs:                       5400.0                                           
+                                                                                
+                                    Parameter Estimates                                     
+============================================================================================
+                          Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+--------------------------------------------------------------------------------------------
+Intercept                   -0.7113     0.4209    -1.6900     0.0910     -1.5363      0.1137
+manufacturing_post2021      -0.0875     0.1043    -0.8391     0.4014     -0.2919      0.1169
+did_x_ln_prov_sci            0.0070     0.0173     0.4021     0.6876     -0.0270      0.0409
+ln_assets                    0.0531     0.0176     3.0125     0.0026      0.0186      0.0877
+roa                         -0.0121     0.0697    -0.1737     0.8621     -0.1487      0.1245
+cashflow_ratio              -0.0527     0.0760    -0.6942     0.4875     -0.2016      0.0962
+ln_province_sci_tech_exp     0.0009     0.0315     0.0286     0.9772     -0.0608      0.0626
+============================================================================================
+
+F-test for Poolability: 11.159
+P-value: 0.0000
+Distribution: F(5626,30936)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2024] P4: 三重差分 — DID + DID×高财政科技省份 + 高财政省份
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0007
+Estimator:                   PanelOLS   R-squared (Between):             -0.0192
+No. Observations:               37694   R-squared (Within):               0.0008
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0063
+Time:                        00:24:03   Log-likelihood                -3.762e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      3.9619
+Entities:                        5713   P-value                           0.0006
+Avg Obs:                       6.5979   Distribution:                 F(6,31968)
+Min Obs:                       1.0000                                           
+Max Obs:                       8.0000   F-statistic (robust):             2.0360
+                                        P-value                           0.0574
+Time periods:                       8   Distribution:                 F(6,31968)
+Avg Obs:                       4711.8                                           
+Min Obs:                       3826.0                                           
+Max Obs:                       5484.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.7223     0.3778    -1.9118     0.0559     -1.4629      0.0182
+manufacturing_post2021    -0.0357     0.0276    -1.2941     0.1956     -0.0898      0.0184
+did_x_high_sci_prov       -0.0096     0.0317    -0.3028     0.7621     -0.0718      0.0526
+high_sci_tech_province     0.0042     0.0227     0.1833     0.8546     -0.0404      0.0487
+ln_assets                  0.0532     0.0170     3.1233     0.0018      0.0198      0.0867
+roa                       -0.0166     0.0682    -0.2429     0.8081     -0.1503      0.1171
+cashflow_ratio            -0.0516     0.0729    -0.7076     0.4792     -0.1944      0.0913
+==========================================================================================
+
+F-test for Poolability: 11.463
+P-value: 0.0000
+Distribution: F(5719,31968)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2024] P5: High_sci_tech_prov 分样本 DID
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0009
+Estimator:                   PanelOLS   R-squared (Between):             -0.0213
+No. Observations:               20249   R-squared (Within):               0.0007
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0101
+Time:                        00:24:04   Log-likelihood                -2.032e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      3.6148
+Entities:                        3697   P-value                           0.0060
+Avg Obs:                       5.4771   Distribution:                 F(4,16541)
+Min Obs:                       1.0000                                           
+Max Obs:                       8.0000   F-statistic (robust):             1.8444
+                                        P-value                           0.1173
+Time periods:                       8   Distribution:                 F(4,16541)
+Avg Obs:                       2531.1                                           
+Min Obs:                       1211.0                                           
+Max Obs:                       3403.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.8864     0.6278    -1.4119     0.1580     -2.1169      0.3442
+manufacturing_post2021    -0.0534     0.0344    -1.5518     0.1207     -0.1208      0.0140
+ln_assets                  0.0638     0.0284     2.2478     0.0246      0.0082      0.1194
+roa                        0.0406     0.1021     0.3980     0.6906     -0.1594      0.2407
+cashflow_ratio            -0.0121     0.1064    -0.1136     0.9095     -0.2206      0.1964
+==========================================================================================
+
+F-test for Poolability: 10.816
+P-value: 0.0000
+Distribution: F(3703,16541)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2024] P5: Low_sci_tech_prov 分样本 DID
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0010
+Estimator:                   PanelOLS   R-squared (Between):             -0.0144
+No. Observations:               17445   R-squared (Within):               0.0014
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0024
+Time:                        00:24:04   Log-likelihood                -1.592e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      3.4100
+Entities:                        3755   P-value                           0.0086
+Avg Obs:                       4.6458   Distribution:                 F(4,13679)
+Min Obs:                       1.0000                                           
+Max Obs:                       8.0000   F-statistic (robust):             1.9242
+                                        P-value                           0.1034
+Time periods:                       8   Distribution:                 F(4,13679)
+Avg Obs:                       2180.6                                           
+Min Obs:                       1756.0                                           
+Max Obs:                       2615.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.8919     0.5192    -1.7179     0.0858     -1.9095      0.1258
+manufacturing_post2021    -0.0207     0.0320    -0.6453     0.5187     -0.0835      0.0421
+ln_assets                  0.0575     0.0234     2.4580     0.0140      0.0116      0.1033
+roa                       -0.0689     0.0997    -0.6910     0.4896     -0.2643      0.1265
+cashflow_ratio            -0.1326     0.1110    -1.1948     0.2322     -0.3500      0.0849
+==========================================================================================
+
+F-test for Poolability: 7.4751
+P-value: 0.0000
+Distribution: F(3761,13679)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2024] M2a: rd_intensity ~ manufacturing_post2021 (机制: 研发投入)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:           rd_intensity   R-squared:                        0.0816
+Estimator:                   PanelOLS   R-squared (Between):              0.0349
+No. Observations:               32893   R-squared (Within):               0.0948
+Date:                Sun, May 17 2026   R-squared (Overall):              0.0359
+Time:                        00:24:05   Log-likelihood                -7.561e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      612.33
+Entities:                        5317   P-value                           0.0000
+Avg Obs:                       6.1864   Distribution:                 F(4,27565)
+Min Obs:                       1.0000                                           
+Max Obs:                       8.0000   F-statistic (robust):             83.879
+                                        P-value                           0.0000
+Time periods:                       8   Distribution:                 F(4,27565)
+Avg Obs:                       4111.6                                           
+Min Obs:                       3011.0                                           
+Max Obs:                       5067.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                  7.8052     2.2484     3.4715     0.0005      3.3983      12.212
+manufacturing_post2021    -0.1924     0.1268    -1.5169     0.1293     -0.4410      0.0562
+ln_assets                 -0.0568     0.1012    -0.5611     0.5747     -0.2552      0.1416
+roa                       -11.349     0.6789    -16.718     0.0000     -12.680     -10.019
+cashflow_ratio            -3.2753     0.4855    -6.7457     0.0000     -4.2270     -2.3236
+==========================================================================================
+
+F-test for Poolability: 30.022
+P-value: 0.0000
+Distribution: F(5323,27565)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2024] M2b: ln(1+rd_staff) ~ manufacturing_post2021 (机制: 人力投入)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:            ln_rd_staff   R-squared:                        0.0942
+Estimator:                   PanelOLS   R-squared (Between):             -0.2385
+No. Observations:               37694   R-squared (Within):               0.1441
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.1670
+Time:                        00:24:05   Log-likelihood                -4.548e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      831.58
+Entities:                        5713   P-value                           0.0000
+Avg Obs:                       6.5979   Distribution:                 F(4,31970)
+Min Obs:                       1.0000                                           
+Max Obs:                       8.0000   F-statistic (robust):             150.28
+                                        P-value                           0.0000
+Time periods:                       8   Distribution:                 F(4,31970)
+Avg Obs:                       4711.8                                           
+Min Obs:                       3826.0                                           
+Max Obs:                       5484.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -14.753     0.8133    -18.139     0.0000     -16.347     -13.158
+manufacturing_post2021    -0.0733     0.0427    -1.7159     0.0862     -0.1570      0.0104
+ln_assets                  0.8715     0.0366     23.795     0.0000      0.7997      0.9433
+roa                       -0.0250     0.1081    -0.2312     0.8172     -0.2369      0.1869
+cashflow_ratio            -0.2801     0.1226    -2.2846     0.0223     -0.5203     -0.0398
+==========================================================================================
+
+F-test for Poolability: 34.194
+P-value: 0.0000
+Distribution: F(5719,31970)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2024] M2c: 基准 + ln(1+rd_subsidy) (机制: 补贴协同)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0010
+Estimator:                   PanelOLS   R-squared (Between):             -0.0219
+No. Observations:               37694   R-squared (Within):               0.0013
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0087
+Time:                        00:24:06   Log-likelihood                -3.761e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      6.0907
+Entities:                        5713   P-value                           0.0000
+Avg Obs:                       6.5979   Distribution:                 F(5,31969)
+Min Obs:                       1.0000                                           
+Max Obs:                       8.0000   F-statistic (robust):             3.2678
+                                        P-value                           0.0059
+Time periods:                       8   Distribution:                 F(5,31969)
+Avg Obs:                       4711.8                                           
+Min Obs:                       3826.0                                           
+Max Obs:                       5484.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.7275     0.3777    -1.9261     0.0541     -1.4679      0.0128
+manufacturing_post2021    -0.0404     0.0221    -1.8247     0.0681     -0.0838      0.0030
+ln_assets                  0.0543     0.0171     3.1824     0.0015      0.0208      0.0877
+roa                       -0.0132     0.0683    -0.1937     0.8464     -0.1471      0.1207
+cashflow_ratio            -0.0531     0.0729    -0.7277     0.4668     -0.1960      0.0899
+ln_rd_subsidy             -0.0019     0.0009    -2.0144     0.0440     -0.0037  -5.092e-05
+==========================================================================================
+
+F-test for Poolability: 11.402
+P-value: 0.0000
+Distribution: F(5719,31969)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2024] M2d: 基准 + policy_exposure (外生暴露强度)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0009
+Estimator:                   PanelOLS   R-squared (Between):             -0.0026
+No. Observations:               30184   R-squared (Within):               0.0007
+Date:                Sun, May 17 2026   R-squared (Overall):              0.0014
+Time:                        00:24:06   Log-likelihood                -3.267e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      4.4426
+Entities:                        4069   P-value                           0.0005
+Avg Obs:                       7.4180   Distribution:                 F(5,26103)
+Min Obs:                       1.0000                                           
+Max Obs:                       8.0000   F-statistic (robust):             2.7124
+                                        P-value                           0.0187
+Time periods:                       8   Distribution:                 F(5,26103)
+Avg Obs:                       3773.0                                           
+Min Obs:                       3310.0                                           
+Max Obs:                       4033.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.6724     0.4226    -1.5912     0.1116     -1.5008      0.1559
+manufacturing_post2021    -0.0443     0.0266    -1.6630     0.0963     -0.0965      0.0079
+policy_exposure         1.016e-05  4.866e-06     2.0887     0.0367   6.258e-07    1.97e-05
+ln_assets                  0.0507     0.0191     2.6582     0.0079      0.0133      0.0881
+roa                       -0.0177     0.0768    -0.2300     0.8181     -0.1681      0.1328
+cashflow_ratio            -0.0745     0.0905    -0.8233     0.4104     -0.2519      0.1029
+==========================================================================================
+
+F-test for Poolability: 10.002
+P-value: 0.0000
+Distribution: F(4075,26103)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2024] M3a_grant: ln_invention_grant ~ manufacturing_post2021
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_grant   R-squared:                        0.0013
+Estimator:                   PanelOLS   R-squared (Between):              0.0066
+No. Observations:               37694   R-squared (Within):               0.0061
+Date:                Sun, May 17 2026   R-squared (Overall):              0.0099
+Time:                        00:24:07   Log-likelihood                -3.581e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      10.499
+Entities:                        5713   P-value                           0.0000
+Avg Obs:                       6.5979   Distribution:                 F(4,31970)
+Min Obs:                       1.0000                                           
+Max Obs:                       8.0000   F-statistic (robust):             5.9243
+                                        P-value                           0.0001
+Time periods:                       8   Distribution:                 F(4,31970)
+Avg Obs:                       4711.8                                           
+Min Obs:                       3826.0                                           
+Max Obs:                       5484.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -1.2854     0.3557    -3.6137     0.0003     -1.9825     -0.5882
+manufacturing_post2021     0.0119     0.0210     0.5640     0.5728     -0.0293      0.0531
+ln_assets                  0.0735     0.0160     4.5848     0.0000      0.0421      0.1050
+roa                       -0.0807     0.0567    -1.4236     0.1546     -0.1919      0.0304
+cashflow_ratio             0.0579     0.0659     0.8780     0.3800     -0.0713      0.1871
+==========================================================================================
+
+F-test for Poolability: 6.7435
+P-value: 0.0000
+Distribution: F(5719,31970)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2024] M3b_patent_apply: ln_patent_apply_total ~ manufacturing_post2021
+                            PanelOLS Estimation Summary                            
+===================================================================================
+Dep. Variable:     ln_patent_apply_total   R-squared:                        0.0011
+Estimator:                      PanelOLS   R-squared (Between):             -0.0063
+No. Observations:                  37694   R-squared (Within):               0.0015
+Date:                   Sun, May 17 2026   R-squared (Overall):              0.0040
+Time:                           00:24:07   Log-likelihood                -4.957e+04
+Cov. Estimator:                Clustered                                           
+                                           F-statistic:                      8.5284
+Entities:                           5713   P-value                           0.0000
+Avg Obs:                          6.5979   Distribution:                 F(4,31970)
+Min Obs:                          1.0000                                           
+Max Obs:                          8.0000   F-statistic (robust):             4.6552
+                                           P-value                           0.0009
+Time periods:                          8   Distribution:                 F(4,31970)
+Avg Obs:                          4711.8                                           
+Min Obs:                          3826.0                                           
+Max Obs:                          5484.0                                           
+                                                                                   
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -1.4938     0.5124    -2.9156     0.0036     -2.4981     -0.4896
+manufacturing_post2021    -0.0319     0.0291    -1.0967     0.2728     -0.0890      0.0251
+ln_assets                  0.0966     0.0231     4.1810     0.0000      0.0513      0.1418
+roa                        0.0005     0.0850     0.0061     0.9952     -0.1661      0.1671
+cashflow_ratio            -0.0825     0.1001    -0.8240     0.4099     -0.2786      0.1137
+==========================================================================================
+
+F-test for Poolability: 9.6770
+P-value: 0.0000
+Distribution: F(5719,31970)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2024] M3c_patent_grant: ln_patent_grant_total ~ manufacturing_post2021
+                            PanelOLS Estimation Summary                            
+===================================================================================
+Dep. Variable:     ln_patent_grant_total   R-squared:                        0.0014
+Estimator:                      PanelOLS   R-squared (Between):              0.0304
+No. Observations:                  37694   R-squared (Within):               0.0043
+Date:                   Sun, May 17 2026   R-squared (Overall):              0.0221
+Time:                           00:24:08   Log-likelihood                -5.075e+04
+Cov. Estimator:                Clustered                                           
+                                           F-statistic:                      10.958
+Entities:                           5713   P-value                           0.0000
+Avg Obs:                          6.5979   Distribution:                 F(4,31970)
+Min Obs:                          1.0000                                           
+Max Obs:                          8.0000   F-statistic (robust):             6.2537
+                                           P-value                           0.0001
+Time periods:                          8   Distribution:                 F(4,31970)
+Avg Obs:                          4711.8                                           
+Min Obs:                          3826.0                                           
+Max Obs:                          5484.0                                           
+                                                                                   
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -1.9268     0.5326    -3.6176     0.0003     -2.9707     -0.8828
+manufacturing_post2021    -0.0029     0.0319    -0.0905     0.9279     -0.0654      0.0596
+ln_assets                  0.1124     0.0240     4.6762     0.0000      0.0653      0.1595
+roa                        0.0772     0.0913     0.8451     0.3981     -0.1018      0.2562
+cashflow_ratio            -0.0641     0.0990    -0.6474     0.5174     -0.2582      0.1300
+==========================================================================================
+
+F-test for Poolability: 6.6696
+P-value: 0.0000
+Distribution: F(5719,31970)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2024] M4a (安慰剂): 2017-2020, 假政策=2019
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0002
+Estimator:                   PanelOLS   R-squared (Between):             -0.0030
+No. Observations:               16480   R-squared (Within):               0.0007
+Date:                Sun, May 17 2026   R-squared (Overall):              0.0045
+Time:                        00:24:08   Log-likelihood                -1.386e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      0.7133
+Entities:                        4638   P-value                           0.5827
+Avg Obs:                       3.5533   Distribution:                 F(4,11835)
+Min Obs:                       1.0000                                           
+Max Obs:                       4.0000   F-statistic (robust):             0.4983
+                                        P-value                           0.7370
+Time periods:                       4   Distribution:                 F(4,11835)
+Avg Obs:                       4120.0                                           
+Min Obs:                       3826.0                                           
+Max Obs:                       4589.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.2342     0.6751    -0.3469     0.7287     -1.5575      1.0891
+manufacturing_post2019     0.0254     0.0252     1.0066     0.3141     -0.0240      0.0748
+ln_assets                  0.0247     0.0305     0.8108     0.4175     -0.0350      0.0844
+roa                        0.0147     0.0886     0.1665     0.8678     -0.1589      0.1884
+cashflow_ratio             0.0387     0.1197     0.3238     0.7461     -0.1958      0.2733
+==========================================================================================
+
+F-test for Poolability: 5.1597
+P-value: 0.0000
+Distribution: F(4640,11835)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2024] M4b (安慰剂): 2017-2020, 假政策=2020
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0003
+Estimator:                   PanelOLS   R-squared (Between):             -0.0028
+No. Observations:               16480   R-squared (Within):               0.0008
+Date:                Sun, May 17 2026   R-squared (Overall):              0.0039
+Time:                        00:24:08   Log-likelihood                -1.386e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      0.7490
+Entities:                        4638   P-value                           0.5585
+Avg Obs:                       3.5533   Distribution:                 F(4,11835)
+Min Obs:                       1.0000                                           
+Max Obs:                       4.0000   F-statistic (robust):             0.5298
+                                        P-value                           0.7139
+Time periods:                       4   Distribution:                 F(4,11835)
+Avg Obs:                       4120.0                                           
+Min Obs:                       3826.0                                           
+Max Obs:                       4589.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.2201     0.6746    -0.3263     0.7442     -1.5424      1.1021
+manufacturing_post2020     0.0304     0.0280     1.0859     0.2776     -0.0245      0.0854
+ln_assets                  0.0242     0.0305     0.7950     0.4267     -0.0355      0.0839
+roa                        0.0113     0.0887     0.1274     0.8986     -0.1626      0.1852
+cashflow_ratio             0.0407     0.1198     0.3395     0.7342     -0.1941      0.2754
+==========================================================================================
+
+F-test for Poolability: 5.1991
+P-value: 0.0000
+Distribution: F(4640,11835)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2024] M5: Event study 2017-2024, baseline=2020, vars=['event_m4', 'event_m3', 'event_m2', 'event_p0', 'event_p1', 'event_p2', 'event_p3']
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0009
+Estimator:                   PanelOLS   R-squared (Between):             -0.0199
+No. Observations:               37694   R-squared (Within):              -0.0002
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0068
+Time:                        00:24:09   Log-likelihood                -3.762e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      2.7613
+Entities:                        5713   P-value                           0.0021
+Avg Obs:                       6.5979   Distribution:                F(10,31964)
+Min Obs:                       1.0000                                           
+Max Obs:                       8.0000   F-statistic (robust):             1.5460
+                                        P-value                           0.1162
+Time periods:                       8   Distribution:                F(10,31964)
+Avg Obs:                       4711.8                                           
+Min Obs:                       3826.0                                           
+Max Obs:                       5484.0                                           
+                                                                                
+                               Parameter Estimates                                
+==================================================================================
+                Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+----------------------------------------------------------------------------------
+Intercept         -0.7436     0.3793    -1.9606     0.0499     -1.4870     -0.0002
+event_m4           0.0237     0.0309     0.7659     0.4437     -0.0369      0.0843
+event_m3          -0.0134     0.0283    -0.4743     0.6353     -0.0690      0.0421
+event_m2           0.0004     0.0283     0.0153     0.9878     -0.0550      0.0559
+event_p0          -0.0265     0.0248    -1.0697     0.2848     -0.0751      0.0221
+event_p1          -0.0320     0.0277    -1.1543     0.2484     -0.0862      0.0223
+event_p2          -0.0298     0.0286    -1.0433     0.2968     -0.0858      0.0262
+event_p3          -0.0695     0.0348    -1.9987     0.0457     -0.1377     -0.0013
+ln_assets          0.0542     0.0171     3.1650     0.0016      0.0207      0.0878
+roa               -0.0173     0.0684    -0.2536     0.7998     -0.1513      0.1166
+cashflow_ratio    -0.0523     0.0729    -0.7173     0.4732     -0.1952      0.0906
+==================================================================================
+
+F-test for Poolability: 11.450
+P-value: 0.0000
+Distribution: F(5719,31964)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2022] M1: ln_invention_apply ~ manufacturing_post2021 + controls + FE
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0005
+Estimator:                   PanelOLS   R-squared (Between):             -0.0221
+No. Observations:               26770   R-squared (Within):               0.0005
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0042
+Time:                        00:24:10   Log-likelihood                -2.478e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      2.5006
+Entities:                        5403   P-value                           0.0404
+Avg Obs:                       4.9547   Distribution:                 F(4,21358)
+Min Obs:                       1.0000                                           
+Max Obs:                       6.0000   F-statistic (robust):             1.6323
+                                        P-value                           0.1630
+Time periods:                       6   Distribution:                 F(4,21358)
+Avg Obs:                       4461.7                                           
+Min Obs:                       3826.0                                           
+Max Obs:                       5278.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.6192     0.4409    -1.4042     0.1603     -1.4834      0.2451
+manufacturing_post2021    -0.0238     0.0234    -1.0162     0.3095     -0.0696      0.0221
+ln_assets                  0.0456     0.0199     2.2899     0.0220      0.0066      0.0846
+roa                       -0.0025     0.0742    -0.0340     0.9729     -0.1480      0.1429
+cashflow_ratio             0.0224     0.0869     0.2574     0.7969     -0.1479      0.1927
+==========================================================================================
+
+F-test for Poolability: 8.1886
+P-value: 0.0000
+Distribution: F(5407,21358)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2022] M1b: 基准 + post2023 控制 (2023+ 全行业100%加计扣除)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0005
+Estimator:                   PanelOLS   R-squared (Between):             -0.0221
+No. Observations:               26770   R-squared (Within):               0.0005
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0042
+Time:                        00:24:10   Log-likelihood                -2.478e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      2.5006
+Entities:                        5403   P-value                           0.0404
+Avg Obs:                       4.9547   Distribution:                 F(4,21358)
+Min Obs:                       1.0000                                           
+Max Obs:                       6.0000   F-statistic (robust):             1.6323
+                                        P-value                           0.1630
+Time periods:                       6   Distribution:                 F(4,21358)
+Avg Obs:                       4461.7                                           
+Min Obs:                       3826.0                                           
+Max Obs:                       5278.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.6192     0.4409    -1.4042     0.1603     -1.4834      0.2451
+manufacturing_post2021    -0.0238     0.0234    -1.0162     0.3095     -0.0696      0.0221
+ln_assets                  0.0456     0.0199     2.2899     0.0220      0.0066      0.0846
+roa                       -0.0025     0.0742    -0.0340     0.9729     -0.1480      0.1429
+cashflow_ratio             0.0224     0.0869     0.2574     0.7969     -0.1479      0.1927
+==========================================================================================
+
+F-test for Poolability: 8.1886
+P-value: 0.0000
+Distribution: F(5407,21358)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2022] P1: DID + DID×省财政科技支出占比 + 省财政占比 (连续交互)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0005
+Estimator:                   PanelOLS   R-squared (Between):             -0.0248
+No. Observations:               25813   R-squared (Within):               0.0006
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0063
+Time:                        00:24:11   Log-likelihood                -2.431e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      1.7193
+Entities:                        5254   P-value                           0.1120
+Avg Obs:                       4.9130   Distribution:                 F(6,20548)
+Min Obs:                       1.0000                                           
+Max Obs:                       6.0000   F-statistic (robust):             1.1167
+                                        P-value                           0.3495
+Time periods:                       6   Distribution:                 F(6,20548)
+Avg Obs:                       4302.2                                           
+Min Obs:                       3666.0                                           
+Max Obs:                       5139.0                                           
+                                                                                
+                                    Parameter Estimates                                    
+===========================================================================================
+                         Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+-------------------------------------------------------------------------------------------
+Intercept                  -0.6092     0.4568    -1.3334     0.1824     -1.5046      0.2863
+manufacturing_post2021     -0.0310     0.0474    -0.6538     0.5133     -0.1240      0.0619
+did_x_prov_sci_tech         0.0012     0.0104     0.1143     0.9090     -0.0192      0.0216
+ln_assets                   0.0469     0.0205     2.2830     0.0224      0.0066      0.0871
+roa                        -0.0027     0.0760    -0.0360     0.9713     -0.1517      0.1462
+cashflow_ratio              0.0207     0.0913     0.2269     0.8205     -0.1582      0.1996
+province_sci_tech_ratio    -0.0067     0.0135    -0.4970     0.6192     -0.0333      0.0198
+===========================================================================================
+
+F-test for Poolability: 8.0142
+P-value: 0.0000
+Distribution: F(5258,20548)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2022] P2: DID + DID×省R&D强度 + 省R&D强度 (连续交互)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0005
+Estimator:                   PanelOLS   R-squared (Between):             -0.0227
+No. Observations:               25813   R-squared (Within):               0.0005
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0051
+Time:                        00:24:11   Log-likelihood                -2.431e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      1.7065
+Entities:                        5254   P-value                           0.1150
+Avg Obs:                       4.9130   Distribution:                 F(6,20548)
+Min Obs:                       1.0000                                           
+Max Obs:                       6.0000   F-statistic (robust):             1.1157
+                                        P-value                           0.3501
+Time periods:                       6   Distribution:                 F(6,20548)
+Avg Obs:                       4302.2                                           
+Min Obs:                       3666.0                                           
+Max Obs:                       5139.0                                           
+                                                                                
+                                    Parameter Estimates                                    
+===========================================================================================
+                         Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+-------------------------------------------------------------------------------------------
+Intercept                  -0.6433     0.4562    -1.4101     0.1585     -1.5376      0.2509
+manufacturing_post2021     -0.0079     0.0497    -0.1598     0.8730     -0.1054      0.0895
+did_x_prov_rd_intensity    -0.0066     0.0159    -0.4134     0.6793     -0.0377      0.0246
+ln_assets                   0.0467     0.0206     2.2638     0.0236      0.0063      0.0871
+roa                        -0.0046     0.0760    -0.0599     0.9522     -0.1536      0.1445
+cashflow_ratio              0.0197     0.0913     0.2159     0.8291     -0.1592      0.1986
+province_rd_intensity       0.0042     0.0293     0.1444     0.8852     -0.0533      0.0617
+===========================================================================================
+
+F-test for Poolability: 7.9848
+P-value: 0.0000
+Distribution: F(5258,20548)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2022] P3: DID + DID×ln(省财政科技支出) + ln(省财政科技支出)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0005
+Estimator:                   PanelOLS   R-squared (Between):             -0.0223
+No. Observations:               25813   R-squared (Within):               0.0005
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0048
+Time:                        00:24:12   Log-likelihood                -2.431e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      1.7144
+Entities:                        5254   P-value                           0.1132
+Avg Obs:                       4.9130   Distribution:                 F(6,20548)
+Min Obs:                       1.0000                                           
+Max Obs:                       6.0000   F-statistic (robust):             1.0882
+                                        P-value                           0.3666
+Time periods:                       6   Distribution:                 F(6,20548)
+Avg Obs:                       4302.2                                           
+Min Obs:                       3666.0                                           
+Max Obs:                       5139.0                                           
+                                                                                
+                                    Parameter Estimates                                     
+============================================================================================
+                          Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+--------------------------------------------------------------------------------------------
+Intercept                   -0.6266     0.4889    -1.2816     0.2000     -1.5848      0.3317
+manufacturing_post2021      -0.0723     0.1047    -0.6909     0.4896     -0.2776      0.1329
+did_x_ln_prov_sci            0.0078     0.0176     0.4423     0.6583     -0.0268      0.0423
+ln_assets                    0.0460     0.0205     2.2440     0.0248      0.0058      0.0862
+roa                         -0.0025     0.0759    -0.0329     0.9738     -0.1513      0.1463
+cashflow_ratio               0.0208     0.0913     0.2283     0.8195     -0.1581      0.1998
+ln_province_sci_tech_exp     0.0016     0.0347     0.0450     0.9641     -0.0664      0.0695
+============================================================================================
+
+F-test for Poolability: 8.0122
+P-value: 0.0000
+Distribution: F(5258,20548)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2022] P4: 三重差分 — DID + DID×高财政科技省份 + 高财政省份
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0005
+Estimator:                   PanelOLS   R-squared (Between):             -0.0218
+No. Observations:               26770   R-squared (Within):               0.0005
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0040
+Time:                        00:24:12   Log-likelihood                -2.478e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      1.6865
+Entities:                        5403   P-value                           0.1198
+Avg Obs:                       4.9547   Distribution:                 F(6,21356)
+Min Obs:                       1.0000                                           
+Max Obs:                       6.0000   F-statistic (robust):             1.0929
+                                        P-value                           0.3637
+Time periods:                       6   Distribution:                 F(6,21356)
+Avg Obs:                       4461.7                                           
+Min Obs:                       3826.0                                           
+Max Obs:                       5278.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.6198     0.4404    -1.4072     0.1594     -1.4830      0.2435
+manufacturing_post2021    -0.0236     0.0292    -0.8081     0.4190     -0.0809      0.0337
+did_x_high_sci_prov       -0.0012     0.0339    -0.0368     0.9707     -0.0676      0.0651
+high_sci_tech_province     0.0064     0.0233     0.2757     0.7828     -0.0392      0.0521
+ln_assets                  0.0454     0.0199     2.2885     0.0221      0.0065      0.0844
+roa                       -0.0025     0.0742    -0.0331     0.9736     -0.1479      0.1429
+cashflow_ratio             0.0223     0.0869     0.2566     0.7975     -0.1481      0.1927
+==========================================================================================
+
+F-test for Poolability: 8.1744
+P-value: 0.0000
+Distribution: F(5407,21356)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2022] P5: High_sci_tech_prov 分样本 DID
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0009
+Estimator:                   PanelOLS   R-squared (Between):             -0.0329
+No. Observations:               13483   R-squared (Within):               0.0010
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0131
+Time:                        00:24:12   Log-likelihood                -1.244e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      2.2059
+Entities:                        3406   P-value                           0.0657
+Avg Obs:                       3.9586   Distribution:                 F(4,10068)
+Min Obs:                       1.0000                                           
+Max Obs:                       6.0000   F-statistic (robust):             1.2413
+                                        P-value                           0.2910
+Time periods:                       6   Distribution:                 F(4,10068)
+Avg Obs:                       2247.2                                           
+Min Obs:                       1211.0                                           
+Max Obs:                       2991.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -1.1674     0.8103    -1.4408     0.1497     -2.7557      0.4209
+manufacturing_post2021    -0.0312     0.0374    -0.8345     0.4040     -0.1045      0.0421
+ln_assets                  0.0725     0.0365     1.9847     0.0472      0.0009      0.1441
+roa                       -0.0276     0.1142    -0.2412     0.8094     -0.2515      0.1964
+cashflow_ratio             0.0757     0.1416     0.5343     0.5932     -0.2020      0.3533
+==========================================================================================
+
+F-test for Poolability: 7.3335
+P-value: 0.0000
+Distribution: F(3410,10068)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2022] P5: Low_sci_tech_prov 分样本 DID
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0003
+Estimator:                   PanelOLS   R-squared (Between):             -0.0121
+No. Observations:               13287   R-squared (Within):               0.0003
+Date:                Sun, May 17 2026   R-squared (Overall):              0.0007
+Time:                        00:24:13   Log-likelihood                -1.093e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      0.6490
+Entities:                        3655   P-value                           0.6275
+Avg Obs:                       3.6353   Distribution:                  F(4,9623)
+Min Obs:                       1.0000                                           
+Max Obs:                       6.0000   F-statistic (robust):             0.4742
+                                        P-value                           0.7547
+Time periods:                       6   Distribution:                  F(4,9623)
+Avg Obs:                       2214.5                                           
+Min Obs:                       1756.0                                           
+Max Obs:                       2615.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.3721     0.5732    -0.6492     0.5162     -1.4957      0.7515
+manufacturing_post2021    -0.0088     0.0332    -0.2656     0.7905     -0.0739      0.0563
+ln_assets                  0.0322     0.0259     1.2442     0.2135     -0.0185      0.0829
+roa                       -0.0125     0.1077    -0.1156     0.9079     -0.2236      0.1987
+cashflow_ratio            -0.0456     0.1236    -0.3686     0.7124     -0.2879      0.1968
+==========================================================================================
+
+F-test for Poolability: 5.9922
+P-value: 0.0000
+Distribution: F(3659,9623)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2022] M2a: rd_intensity ~ manufacturing_post2021 (机制: 研发投入)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:           rd_intensity   R-squared:                        0.0637
+Estimator:                   PanelOLS   R-squared (Between):              0.0332
+No. Observations:               22829   R-squared (Within):               0.0601
+Date:                Sun, May 17 2026   R-squared (Overall):              0.0303
+Time:                        00:24:13   Log-likelihood                -4.974e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      304.92
+Entities:                        4898   P-value                           0.0000
+Avg Obs:                       4.6609   Distribution:                 F(4,17922)
+Min Obs:                       1.0000                                           
+Max Obs:                       6.0000   F-statistic (robust):             42.690
+                                        P-value                           0.0000
+Time periods:                       6   Distribution:                 F(4,17922)
+Avg Obs:                       3804.8                                           
+Min Obs:                       3011.0                                           
+Max Obs:                       4701.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                  9.4394     2.6802     3.5219     0.0004      4.1860      14.693
+manufacturing_post2021    -0.2852     0.1269    -2.2479     0.0246     -0.5339     -0.0365
+ln_assets                 -0.1546     0.1209    -1.2791     0.2009     -0.3915      0.0823
+roa                       -8.7890     0.7628    -11.521     0.0000     -10.284     -7.2937
+cashflow_ratio            -2.2157     0.5344    -4.1459     0.0000     -3.2633     -1.1682
+==========================================================================================
+
+F-test for Poolability: 22.666
+P-value: 0.0000
+Distribution: F(4902,17922)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2022] M2b: ln(1+rd_staff) ~ manufacturing_post2021 (机制: 人力投入)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:            ln_rd_staff   R-squared:                        0.0779
+Estimator:                   PanelOLS   R-squared (Between):             -0.1846
+No. Observations:               26770   R-squared (Within):               0.1107
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.1310
+Time:                        00:24:14   Log-likelihood                 -3.13e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      451.36
+Entities:                        5403   P-value                           0.0000
+Avg Obs:                       4.9547   Distribution:                 F(4,21358)
+Min Obs:                       1.0000                                           
+Max Obs:                       6.0000   F-statistic (robust):             89.215
+                                        P-value                           0.0000
+Time periods:                       6   Distribution:                 F(4,21358)
+Avg Obs:                       4461.7                                           
+Min Obs:                       3826.0                                           
+Max Obs:                       5278.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -13.781     0.9980    -13.808     0.0000     -15.737     -11.825
+manufacturing_post2021    -0.1381     0.0417    -3.3102     0.0009     -0.2199     -0.0563
+ln_assets                  0.8229     0.0450     18.293     0.0000      0.7348      0.9111
+roa                        0.0234     0.1198     0.1950     0.8454     -0.2114      0.2581
+cashflow_ratio            -0.1623     0.1461    -1.1105     0.2668     -0.4487      0.1241
+==========================================================================================
+
+F-test for Poolability: 30.060
+P-value: 0.0000
+Distribution: F(5407,21358)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2022] M2c: 基准 + ln(1+rd_subsidy) (机制: 补贴协同)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0005
+Estimator:                   PanelOLS   R-squared (Between):             -0.0258
+No. Observations:               26770   R-squared (Within):               0.0005
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0069
+Time:                        00:24:14   Log-likelihood                -2.478e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      2.2726
+Entities:                        5403   P-value                           0.0447
+Avg Obs:                       4.9547   Distribution:                 F(5,21357)
+Min Obs:                       1.0000                                           
+Max Obs:                       6.0000   F-statistic (robust):             1.5005
+                                        P-value                           0.1859
+Time periods:                       6   Distribution:                 F(5,21357)
+Avg Obs:                       4461.7                                           
+Min Obs:                       3826.0                                           
+Max Obs:                       5278.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.6471     0.4410    -1.4675     0.1423     -1.5114      0.2172
+manufacturing_post2021    -0.0226     0.0235    -0.9608     0.3367     -0.0686      0.0235
+ln_assets                  0.0473     0.0199     2.3745     0.0176      0.0083      0.0863
+roa                       -0.0020     0.0743    -0.0270     0.9785     -0.1476      0.1436
+cashflow_ratio             0.0221     0.0869     0.2541     0.7994     -0.1483      0.1924
+ln_rd_subsidy             -0.0011     0.0013    -0.8955     0.3706     -0.0036      0.0013
+==========================================================================================
+
+F-test for Poolability: 7.9516
+P-value: 0.0000
+Distribution: F(5407,21357)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2022] M2d: 基准 + policy_exposure (外生暴露强度)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0008
+Estimator:                   PanelOLS   R-squared (Between):             -0.0036
+No. Observations:               22342   R-squared (Within):               0.0008
+Date:                Sun, May 17 2026   R-squared (Overall):              0.0022
+Time:                        00:24:14   Log-likelihood                 -2.25e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      2.8727
+Entities:                        4069   P-value                           0.0135
+Avg Obs:                       5.4908   Distribution:                 F(5,18263)
+Min Obs:                       1.0000                                           
+Max Obs:                       6.0000   F-statistic (robust):             2.6630
+                                        P-value                           0.0206
+Time periods:                       6   Distribution:                 F(5,18263)
+Avg Obs:                       3723.7                                           
+Min Obs:                       3310.0                                           
+Max Obs:                       4033.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.6181     0.4873    -1.2685     0.2046     -1.5733      0.3370
+manufacturing_post2021    -0.0223     0.0278    -0.8037     0.4216     -0.0768      0.0321
+policy_exposure         1.213e-05  4.232e-06     2.8659     0.0042   3.833e-06   2.042e-05
+ln_assets                  0.0463     0.0220     2.1037     0.0354      0.0032      0.0895
+roa                        0.0046     0.0820     0.0561     0.9553     -0.1561      0.1653
+cashflow_ratio             0.0282     0.1059     0.2665     0.7899     -0.1793      0.2357
+==========================================================================================
+
+F-test for Poolability: 7.8206
+P-value: 0.0000
+Distribution: F(4073,18263)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2022] M3a_grant: ln_invention_grant ~ manufacturing_post2021
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_grant   R-squared:                        0.0012
+Estimator:                   PanelOLS   R-squared (Between):              0.0043
+No. Observations:               26770   R-squared (Within):               0.0022
+Date:                Sun, May 17 2026   R-squared (Overall):              0.0084
+Time:                        00:24:15   Log-likelihood                -2.132e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      6.5853
+Entities:                        5403   P-value                           0.0000
+Avg Obs:                       4.9547   Distribution:                 F(4,21358)
+Min Obs:                       1.0000                                           
+Max Obs:                       6.0000   F-statistic (robust):             4.3600
+                                        P-value                           0.0016
+Time periods:                       6   Distribution:                 F(4,21358)
+Avg Obs:                       4461.7                                           
+Min Obs:                       3826.0                                           
+Max Obs:                       5278.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -1.1962     0.3738    -3.2005     0.0014     -1.9289     -0.4636
+manufacturing_post2021    -0.0044     0.0218    -0.2004     0.8412     -0.0471      0.0383
+ln_assets                  0.0672     0.0168     3.9903     0.0001      0.0342      0.1002
+roa                       -0.0737     0.0562    -1.3117     0.1896     -0.1839      0.0364
+cashflow_ratio             0.1075     0.0700     1.5344     0.1250     -0.0298      0.2447
+==========================================================================================
+
+F-test for Poolability: 5.8660
+P-value: 0.0000
+Distribution: F(5407,21358)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2022] M3b_patent_apply: ln_patent_apply_total ~ manufacturing_post2021
+                            PanelOLS Estimation Summary                            
+===================================================================================
+Dep. Variable:     ln_patent_apply_total   R-squared:                        0.0005
+Estimator:                      PanelOLS   R-squared (Between):             -0.0061
+No. Observations:                  26770   R-squared (Within):               0.0008
+Date:                   Sun, May 17 2026   R-squared (Overall):              0.0066
+Time:                           00:24:15   Log-likelihood                -3.369e+04
+Cov. Estimator:                Clustered                                           
+                                           F-statistic:                      2.4085
+Entities:                           5403   P-value                           0.0471
+Avg Obs:                          4.9547   Distribution:                 F(4,21358)
+Min Obs:                          1.0000                                           
+Max Obs:                          6.0000   F-statistic (robust):             1.4330
+                                           P-value                           0.2201
+Time periods:                          6   Distribution:                 F(4,21358)
+Avg Obs:                          4461.7                                           
+Min Obs:                          3826.0                                           
+Max Obs:                          5278.0                                           
+                                                                                   
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.8786     0.6280    -1.3990     0.1618     -2.1096      0.3524
+manufacturing_post2021    -0.0002     0.0323    -0.0047     0.9963     -0.0635      0.0632
+ln_assets                  0.0657     0.0283     2.3184     0.0204      0.0101      0.1212
+roa                        0.0022     0.0975     0.0229     0.9817     -0.1889      0.1934
+cashflow_ratio             0.0029     0.1210     0.0240     0.9808     -0.2343      0.2401
+==========================================================================================
+
+F-test for Poolability: 7.1873
+P-value: 0.0000
+Distribution: F(5407,21358)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2022] M3c_patent_grant: ln_patent_grant_total ~ manufacturing_post2021
+                            PanelOLS Estimation Summary                            
+===================================================================================
+Dep. Variable:     ln_patent_grant_total   R-squared:                        0.0012
+Estimator:                      PanelOLS   R-squared (Between):              0.0277
+No. Observations:                  26770   R-squared (Within):               0.0039
+Date:                   Sun, May 17 2026   R-squared (Overall):              0.0221
+Time:                           00:24:16   Log-likelihood                -3.357e+04
+Cov. Estimator:                Clustered                                           
+                                           F-statistic:                      6.3546
+Entities:                           5403   P-value                           0.0000
+Avg Obs:                          4.9547   Distribution:                 F(4,21358)
+Min Obs:                          1.0000                                           
+Max Obs:                          6.0000   F-statistic (robust):             4.4109
+                                           P-value                           0.0015
+Time periods:                          6   Distribution:                 F(4,21358)
+Avg Obs:                          4461.7                                           
+Min Obs:                          3826.0                                           
+Max Obs:                          5278.0                                           
+                                                                                   
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -1.5459     0.6028    -2.5643     0.0103     -2.7275     -0.3642
+manufacturing_post2021     0.0431     0.0340     1.2667     0.2053     -0.0236      0.1097
+ln_assets                  0.0927     0.0272     3.4071     0.0007      0.0394      0.1460
+roa                        0.0954     0.1015     0.9394     0.3475     -0.1036      0.2943
+cashflow_ratio             0.0128     0.1142     0.1121     0.9107     -0.2110      0.2366
+==========================================================================================
+
+F-test for Poolability: 5.7814
+P-value: 0.0000
+Distribution: F(5407,21358)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2022] M4a (安慰剂): 2017-2020, 假政策=2019
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0002
+Estimator:                   PanelOLS   R-squared (Between):             -0.0030
+No. Observations:               16480   R-squared (Within):               0.0007
+Date:                Sun, May 17 2026   R-squared (Overall):              0.0045
+Time:                        00:24:16   Log-likelihood                -1.386e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      0.7133
+Entities:                        4638   P-value                           0.5827
+Avg Obs:                       3.5533   Distribution:                 F(4,11835)
+Min Obs:                       1.0000                                           
+Max Obs:                       4.0000   F-statistic (robust):             0.4983
+                                        P-value                           0.7370
+Time periods:                       4   Distribution:                 F(4,11835)
+Avg Obs:                       4120.0                                           
+Min Obs:                       3826.0                                           
+Max Obs:                       4589.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.2342     0.6751    -0.3469     0.7287     -1.5575      1.0891
+manufacturing_post2019     0.0254     0.0252     1.0066     0.3141     -0.0240      0.0748
+ln_assets                  0.0247     0.0305     0.8108     0.4175     -0.0350      0.0844
+roa                        0.0147     0.0886     0.1665     0.8678     -0.1589      0.1884
+cashflow_ratio             0.0387     0.1197     0.3238     0.7461     -0.1958      0.2733
+==========================================================================================
+
+F-test for Poolability: 5.1597
+P-value: 0.0000
+Distribution: F(4640,11835)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2022] M4b (安慰剂): 2017-2020, 假政策=2020
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0003
+Estimator:                   PanelOLS   R-squared (Between):             -0.0028
+No. Observations:               16480   R-squared (Within):               0.0008
+Date:                Sun, May 17 2026   R-squared (Overall):              0.0039
+Time:                        00:24:16   Log-likelihood                -1.386e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      0.7490
+Entities:                        4638   P-value                           0.5585
+Avg Obs:                       3.5533   Distribution:                 F(4,11835)
+Min Obs:                       1.0000                                           
+Max Obs:                       4.0000   F-statistic (robust):             0.5298
+                                        P-value                           0.7139
+Time periods:                       4   Distribution:                 F(4,11835)
+Avg Obs:                       4120.0                                           
+Min Obs:                       3826.0                                           
+Max Obs:                       4589.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.2201     0.6746    -0.3263     0.7442     -1.5424      1.1021
+manufacturing_post2020     0.0304     0.0280     1.0859     0.2776     -0.0245      0.0854
+ln_assets                  0.0242     0.0305     0.7950     0.4267     -0.0355      0.0839
+roa                        0.0113     0.0887     0.1274     0.8986     -0.1626      0.1852
+cashflow_ratio             0.0407     0.1198     0.3395     0.7342     -0.1941      0.2754
+==========================================================================================
+
+F-test for Poolability: 5.1991
+P-value: 0.0000
+Distribution: F(4640,11835)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2017_2022] M5: Event study 2017-2024, baseline=2020, vars=['event_m4', 'event_m3', 'event_m2', 'event_p0', 'event_p1']
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0006
+Estimator:                   PanelOLS   R-squared (Between):             -0.0236
+No. Observations:               26770   R-squared (Within):               0.0009
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0054
+Time:                        00:24:17   Log-likelihood                -2.478e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      1.4786
+Entities:                        5403   P-value                           0.1591
+Avg Obs:                       4.9547   Distribution:                 F(8,21354)
+Min Obs:                       1.0000                                           
+Max Obs:                       6.0000   F-statistic (robust):             1.1338
+                                        P-value                           0.3364
+Time periods:                       6   Distribution:                 F(8,21354)
+Avg Obs:                       4461.7                                           
+Min Obs:                       3826.0                                           
+Max Obs:                       5278.0                                           
+                                                                                
+                               Parameter Estimates                                
+==================================================================================
+                Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+----------------------------------------------------------------------------------
+Intercept         -0.6078     0.4407    -1.3791     0.1679     -1.4715      0.2560
+event_m4           0.0029     0.0318     0.0927     0.9262     -0.0594      0.0653
+event_m3          -0.0345     0.0297    -1.1619     0.2453     -0.0927      0.0237
+event_m2          -0.0150     0.0290    -0.5191     0.6037     -0.0718      0.0418
+event_p0          -0.0330     0.0263    -1.2581     0.2084     -0.0845      0.0184
+event_p1          -0.0351     0.0298    -1.1813     0.2375     -0.0935      0.0232
+ln_assets          0.0454     0.0199     2.2785     0.0227      0.0063      0.0844
+roa               -0.0025     0.0742    -0.0334     0.9733     -0.1479      0.1430
+cashflow_ratio     0.0222     0.0870     0.2551     0.7987     -0.1483      0.1927
+==================================================================================
+
+F-test for Poolability: 8.1452
+P-value: 0.0000
+Distribution: F(5407,21354)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2016_2022] M1: ln_invention_apply ~ manufacturing_post2021 + controls + FE
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0002
+Estimator:                   PanelOLS   R-squared (Between):             -0.0214
+No. Observations:               30205   R-squared (Within):               0.0002
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0018
+Time:                        00:24:17   Log-likelihood                -2.886e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      1.4802
+Entities:                        5406   P-value                           0.2052
+Avg Obs:                       5.5873   Distribution:                 F(4,24789)
+Min Obs:                       1.0000                                           
+Max Obs:                       7.0000   F-statistic (robust):             1.1520
+                                        P-value                           0.3300
+Time periods:                       7   Distribution:                 F(4,24789)
+Avg Obs:                       4315.0                                           
+Min Obs:                       3435.0                                           
+Max Obs:                       5278.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.1524     0.3975    -0.3834     0.7015     -0.9315      0.6267
+manufacturing_post2021    -0.0232     0.0232    -1.0019     0.3164     -0.0687      0.0222
+ln_assets                  0.0239     0.0179     1.3298     0.1836     -0.0113      0.0590
+roa                        0.0468     0.0703     0.6655     0.5057     -0.0910      0.1845
+cashflow_ratio             0.0560     0.0785     0.7132     0.4757     -0.0979      0.2099
+==========================================================================================
+
+F-test for Poolability: 8.2580
+P-value: 0.0000
+Distribution: F(5411,24789)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2016_2022] M1b: 基准 + post2023 控制 (2023+ 全行业100%加计扣除)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0002
+Estimator:                   PanelOLS   R-squared (Between):             -0.0214
+No. Observations:               30205   R-squared (Within):               0.0002
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0018
+Time:                        00:24:18   Log-likelihood                -2.886e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      1.4802
+Entities:                        5406   P-value                           0.2052
+Avg Obs:                       5.5873   Distribution:                 F(4,24789)
+Min Obs:                       1.0000                                           
+Max Obs:                       7.0000   F-statistic (robust):             1.1520
+                                        P-value                           0.3300
+Time periods:                       7   Distribution:                 F(4,24789)
+Avg Obs:                       4315.0                                           
+Min Obs:                       3435.0                                           
+Max Obs:                       5278.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.1524     0.3975    -0.3834     0.7015     -0.9315      0.6267
+manufacturing_post2021    -0.0232     0.0232    -1.0019     0.3164     -0.0687      0.0222
+ln_assets                  0.0239     0.0179     1.3298     0.1836     -0.0113      0.0590
+roa                        0.0468     0.0703     0.6655     0.5057     -0.0910      0.1845
+cashflow_ratio             0.0560     0.0785     0.7132     0.4757     -0.0979      0.2099
+==========================================================================================
+
+F-test for Poolability: 8.2580
+P-value: 0.0000
+Distribution: F(5411,24789)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2016_2022] M2a: rd_intensity ~ manufacturing_post2021 (机制: 研发投入)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:           rd_intensity   R-squared:                        0.0606
+Estimator:                   PanelOLS   R-squared (Between):              0.0325
+No. Observations:               25364   R-squared (Within):               0.0580
+Date:                Sun, May 17 2026   R-squared (Overall):              0.0304
+Time:                        00:24:18   Log-likelihood                -5.629e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      329.56
+Entities:                        4909   P-value                           0.0000
+Avg Obs:                       5.1668   Distribution:                 F(4,20445)
+Min Obs:                       1.0000                                           
+Max Obs:                       7.0000   F-statistic (robust):             45.273
+                                        P-value                           0.0000
+Time periods:                       7   Distribution:                 F(4,20445)
+Avg Obs:                       3623.4                                           
+Min Obs:                       2535.0                                           
+Max Obs:                       4701.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                  9.8251     2.5327     3.8793     0.0001      4.8608      14.789
+manufacturing_post2021    -0.2879     0.1289    -2.2324     0.0256     -0.5406     -0.0351
+ln_assets                 -0.1762     0.1141    -1.5442     0.1226     -0.3999      0.0475
+roa                       -8.8287     0.7366    -11.986     0.0000     -10.272     -7.3849
+cashflow_ratio            -2.0407     0.5489    -3.7179     0.0002     -3.1165     -0.9648
+==========================================================================================
+
+F-test for Poolability: 22.516
+P-value: 0.0000
+Distribution: F(4914,20445)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2016_2022] M2b: ln(1+rd_staff) ~ manufacturing_post2021 (机制: 人力投入)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:            ln_rd_staff   R-squared:                        0.0790
+Estimator:                   PanelOLS   R-squared (Between):             -0.1814
+No. Observations:               30205   R-squared (Within):               0.1183
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.1171
+Time:                        00:24:19   Log-likelihood                -3.718e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      531.27
+Entities:                        5406   P-value                           0.0000
+Avg Obs:                       5.5873   Distribution:                 F(4,24789)
+Min Obs:                       1.0000                                           
+Max Obs:                       7.0000   F-statistic (robust):             97.324
+                                        P-value                           0.0000
+Time periods:                       7   Distribution:                 F(4,24789)
+Avg Obs:                       4315.0                                           
+Min Obs:                       3435.0                                           
+Max Obs:                       5278.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -13.400     0.9476    -14.141     0.0000     -15.257     -11.543
+manufacturing_post2021    -0.1596     0.0430    -3.7105     0.0002     -0.2439     -0.0753
+ln_assets                  0.8033     0.0427     18.796     0.0000      0.7195      0.8870
+roa                        0.1813     0.1234     1.4693     0.1418     -0.0606      0.4233
+cashflow_ratio            -0.1759     0.1425    -1.2346     0.2170     -0.4552      0.1034
+==========================================================================================
+
+F-test for Poolability: 31.496
+P-value: 0.0000
+Distribution: F(5411,24789)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2016_2022] M2c: 基准 + ln(1+rd_subsidy) (机制: 补贴协同)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0002
+Estimator:                   PanelOLS   R-squared (Between):             -0.0217
+No. Observations:               30205   R-squared (Within):               0.0002
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0019
+Time:                        00:24:19   Log-likelihood                -2.886e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      1.1855
+Entities:                        5406   P-value                           0.3134
+Avg Obs:                       5.5873   Distribution:                 F(5,24788)
+Min Obs:                       1.0000                                           
+Max Obs:                       7.0000   F-statistic (robust):             0.9255
+                                        P-value                           0.4630
+Time periods:                       7   Distribution:                 F(5,24788)
+Avg Obs:                       4315.0                                           
+Min Obs:                       3435.0                                           
+Max Obs:                       5278.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.1539     0.3970    -0.3878     0.6982     -0.9321      0.6242
+manufacturing_post2021    -0.0232     0.0233    -0.9954     0.3195     -0.0688      0.0224
+ln_assets                  0.0240     0.0179     1.3366     0.1814     -0.0112      0.0591
+roa                        0.0468     0.0703     0.6657     0.5056     -0.0910      0.1846
+cashflow_ratio             0.0560     0.0785     0.7126     0.4761     -0.0980      0.2099
+ln_rd_subsidy          -7.791e-05     0.0012    -0.0670     0.9466     -0.0024      0.0022
+==========================================================================================
+
+F-test for Poolability: 7.9946
+P-value: 0.0000
+Distribution: F(5411,24788)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2016_2022] M2d: 基准 + policy_exposure (外生暴露强度)
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0005
+Estimator:                   PanelOLS   R-squared (Between):             -0.0033
+No. Observations:               25275   R-squared (Within):               0.0005
+Date:                Sun, May 17 2026   R-squared (Overall):              0.0024
+Time:                        00:24:19   Log-likelihood                -2.621e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      2.1987
+Entities:                        4069   P-value                           0.0516
+Avg Obs:                       6.2116   Distribution:                 F(5,21195)
+Min Obs:                       2.0000                                           
+Max Obs:                       7.0000   F-statistic (robust):             2.4080
+                                        P-value                           0.0343
+Time periods:                       7   Distribution:                 F(5,21195)
+Avg Obs:                       3610.7                                           
+Min Obs:                       2933.0                                           
+Max Obs:                       4033.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.1235     0.4418    -0.2796     0.7798     -0.9896      0.7425
+manufacturing_post2021    -0.0213     0.0276    -0.7731     0.4395     -0.0754      0.0327
+policy_exposure         1.208e-05   4.16e-06     2.9041     0.0037   3.927e-06   2.024e-05
+ln_assets                  0.0235     0.0200     1.1748     0.2401     -0.0157      0.0626
+roa                        0.0566     0.0786     0.7205     0.4712     -0.0974      0.2106
+cashflow_ratio             0.0716     0.0967     0.7411     0.4587     -0.1178      0.2611
+==========================================================================================
+
+F-test for Poolability: 7.9103
+P-value: 0.0000
+Distribution: F(4074,21195)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2016_2022] M3a_grant: ln_invention_grant ~ manufacturing_post2021
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_grant   R-squared:                        0.0009
+Estimator:                   PanelOLS   R-squared (Between):              0.0046
+No. Observations:               30205   R-squared (Within):               0.0019
+Date:                Sun, May 17 2026   R-squared (Overall):              0.0088
+Time:                        00:24:20   Log-likelihood                -2.466e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      5.8891
+Entities:                        5406   P-value                           0.0001
+Avg Obs:                       5.5873   Distribution:                 F(4,24789)
+Min Obs:                       1.0000                                           
+Max Obs:                       7.0000   F-statistic (robust):             3.6792
+                                        P-value                           0.0053
+Time periods:                       7   Distribution:                 F(4,24789)
+Avg Obs:                       4315.0                                           
+Min Obs:                       3435.0                                           
+Max Obs:                       5278.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.9359     0.3363    -2.7833     0.0054     -1.5950     -0.2768
+manufacturing_post2021    -0.0046     0.0216    -0.2136     0.8308     -0.0470      0.0378
+ln_assets                  0.0552     0.0152     3.6403     0.0003      0.0255      0.0849
+roa                       -0.0352     0.0539    -0.6531     0.5137     -0.1409      0.0705
+cashflow_ratio             0.0963     0.0623     1.5457     0.1222     -0.0258      0.2183
+==========================================================================================
+
+F-test for Poolability: 6.0839
+P-value: 0.0000
+Distribution: F(5411,24789)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2016_2022] M3b_patent_apply: ln_patent_apply_total ~ manufacturing_post2021
+                            PanelOLS Estimation Summary                            
+===================================================================================
+Dep. Variable:     ln_patent_apply_total   R-squared:                        0.0003
+Estimator:                      PanelOLS   R-squared (Between):             -0.0090
+No. Observations:                  30205   R-squared (Within):               0.0003
+Date:                   Sun, May 17 2026   R-squared (Overall):              0.0055
+Time:                           00:24:20   Log-likelihood                  -3.9e+04
+Cov. Estimator:                Clustered                                           
+                                           F-statistic:                      2.1155
+Entities:                           5406   P-value                           0.0761
+Avg Obs:                          5.5873   Distribution:                 F(4,24789)
+Min Obs:                          1.0000                                           
+Max Obs:                          7.0000   F-statistic (robust):             1.3765
+                                           P-value                           0.2392
+Time periods:                          7   Distribution:                 F(4,24789)
+Avg Obs:                          4315.0                                           
+Min Obs:                          3435.0                                           
+Max Obs:                          5278.0                                           
+                                                                                   
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.4946     0.5748    -0.8604     0.3896     -1.6212      0.6321
+manufacturing_post2021    -0.0119     0.0323    -0.3698     0.7115     -0.0752      0.0514
+ln_assets                  0.0481     0.0259     1.8557     0.0635     -0.0027      0.0990
+roa                        0.0988     0.0970     1.0186     0.3084     -0.0913      0.2890
+cashflow_ratio            -0.0202     0.1080    -0.1875     0.8513     -0.2320      0.1915
+==========================================================================================
+
+F-test for Poolability: 7.3350
+P-value: 0.0000
+Distribution: F(5411,24789)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[2016_2022] M3c_patent_grant: ln_patent_grant_total ~ manufacturing_post2021
+                            PanelOLS Estimation Summary                            
+===================================================================================
+Dep. Variable:     ln_patent_grant_total   R-squared:                        0.0012
+Estimator:                      PanelOLS   R-squared (Between):              0.0258
+No. Observations:                  30205   R-squared (Within):               0.0038
+Date:                   Sun, May 17 2026   R-squared (Overall):              0.0204
+Time:                           00:24:21   Log-likelihood                -3.848e+04
+Cov. Estimator:                Clustered                                           
+                                           F-statistic:                      7.2246
+Entities:                           5406   P-value                           0.0000
+Avg Obs:                          5.5873   Distribution:                 F(4,24789)
+Min Obs:                          1.0000                                           
+Max Obs:                          7.0000   F-statistic (robust):             4.6168
+                                           P-value                           0.0010
+Time periods:                          7   Distribution:                 F(4,24789)
+Avg Obs:                          4315.0                                           
+Min Obs:                          3435.0                                           
+Max Obs:                          5278.0                                           
+                                                                                   
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -1.4021     0.5569    -2.5176     0.0118     -2.4937     -0.3105
+manufacturing_post2021     0.0404     0.0338     1.1946     0.2323     -0.0259      0.1068
+ln_assets                  0.0859     0.0251     3.4190     0.0006      0.0367      0.1352
+roa                        0.1151     0.0940     1.2238     0.2210     -0.0692      0.2994
+cashflow_ratio            -0.0070     0.1038    -0.0670     0.9466     -0.2105      0.1966
+==========================================================================================
+
+F-test for Poolability: 6.0055
+P-value: 0.0000
+Distribution: F(5411,24789)
+
+Included effects: Entity, Time
+
+====================================================================================================
+[drop2024] ROB: drop 2024
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:     ln_invention_apply   R-squared:                        0.0006
+Estimator:                   PanelOLS   R-squared (Between):             -0.0216
+No. Observations:               32210   R-squared (Within):               0.0007
+Date:                Sun, May 17 2026   R-squared (Overall):             -0.0060
+Time:                        00:24:21   Log-likelihood                 -3.04e+04
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      4.2695
+Entities:                        5614   P-value                           0.0019
+Avg Obs:                       5.7374   Distribution:                 F(4,26586)
+Min Obs:                       1.0000                                           
+Max Obs:                       7.0000   F-statistic (robust):             2.4862
+                                        P-value                           0.0414
+Time periods:                       7   Distribution:                 F(4,26586)
+Avg Obs:                       4601.4                                           
+Min Obs:                       3826.0                                           
+Max Obs:                       5440.0                                           
+                                                                                
+                                   Parameter Estimates                                    
+==========================================================================================
+                        Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------------------
+Intercept                 -0.7140     0.3934    -1.8147     0.0696     -1.4851      0.0572
+manufacturing_post2021    -0.0291     0.0223    -1.3022     0.1929     -0.0729      0.0147
+ln_assets                  0.0512     0.0178     2.8854     0.0039      0.0164      0.0860
+roa                        0.0037     0.0688     0.0537     0.9572     -0.1312      0.1386
+cashflow_ratio            -0.0323     0.0752    -0.4293     0.6677     -0.1797      0.1151
+==========================================================================================
+
+F-test for Poolability: 10.224
+P-value: 0.0000
+Distribution: F(5619,26586)
+
+Included effects: Entity, Time
