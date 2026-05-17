@@ -1,0 +1,11 @@
+﻿model,sample,dependent,variable,coef,std_err,p_value,nobs,firms,years,r2_within,engine,raw_p_value,adjusted_p_value_BH,significance_raw,significance_adjusted,theory_score,robustness_score,recommendation
+D13_PSM_Balance,2017-2022,N/A,ln_assets,0.4278965863948404,,,,,,,PSM SMD before,,,0,0,1,1,control_variable
+D13_PSM_Balance,2017-2022,N/A,roa,0.3113749502388232,,,,,,,PSM SMD before,,,0,0,1,1,control_variable
+D13_PSM_Balance,2017-2022,N/A,cashflow_ratio,0.24428838200957015,,,,,,,PSM SMD before,,,0,0,1,1,control_variable
+D13_PSM_Balance,2017-2022,N/A,firm_age,0.28597267667226695,,,,,,,PSM SMD before,,,0,0,1,1,control_variable
+D13_PSM_DID,,ln_invention_apply,manufacturing_post2021,-0.025499153380430517,0.02740487090156508,0.3521456035331001,21191.0,3854.0,6.0,-0.0632629914647238,PanelOLS,0.3521456035331001,0.7955882153895966,0,0,3,1,not_recommended
+D13_PSM_DID,,ln_invention_apply,ln_assets,0.04773459758686227,0.024250319233199657,0.049036672481441945,21191.0,3854.0,6.0,-0.0632629914647238,PanelOLS,0.049036672481441945,,1,0,1,1,control_variable
+D13_PSM_DID,,ln_invention_apply,roa,-0.024716589877900097,0.09014060509460088,0.7839338902798159,21191.0,3854.0,6.0,-0.0632629914647238,PanelOLS,0.7839338902798159,,0,0,1,1,control_variable
+D13_PSM_DID,,ln_invention_apply,cashflow_ratio,0.04073835468132636,0.10765642336799332,0.7051300728218477,21191.0,3854.0,6.0,-0.0632629914647238,PanelOLS,0.7051300728218477,,0,0,1,1,control_variable
+D13_PSM_DID,,ln_invention_apply,firm_age,-0.10363666485580744,0.09936716696642968,0.29697818002024334,21191.0,3854.0,6.0,-0.0632629914647238,PanelOLS,0.29697818002024334,,0,0,1,1,control_variable
+D13_IPW_DID,2017-2022,ln_invention_apply,manufacturing_post2021,-0.031563357436925225,0.02851565302294114,0.2683598228462323,24498.0,4427.0,6.0,-0.005297222120686174,IPW-PanelOLS,0.2683598228462323,0.7741835873750684,0,0,3,1,not_recommended

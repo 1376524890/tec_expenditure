@@ -1,0 +1,7 @@
+﻿dependent,coef,se,p_value,nobs,firms
+ln_rd_expense_yuan,-0.7714,0.1227,0.0,25831,5262
+ln_rd_expense_10k,-0.2828,0.0568,0.0,25831,5262
+ln_rd_expense_million,-0.0422,0.0287,0.1406,25831,5262
+rd_intensity,-0.0029,0.0012,0.018,22822,4898
+ln_rd_staff,-0.1941,0.0443,0.0,25831,5262
+rd_staff_ratio,-0.0001,0.0029,0.9708,21949,4843

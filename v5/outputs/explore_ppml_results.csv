@@ -1,0 +1,5 @@
+﻿model,sample,dependent,variable,coef,std_err,p_value,nobs,firms,years,r2_within,engine,raw_p_value,adjusted_p_value_BH,significance_raw,significance_adjusted,theory_score,robustness_score,recommendation
+D12_PPML_invention_apply,2017-2022,invention_apply,manufacturing_post2021,,,,25831.0,5262.0,6.0,,PPML (需R/Stata),,,0,0,3,1,not_estimated
+D12_PPML_invention_grant,2017-2022,invention_grant,manufacturing_post2021,,,,25831.0,5262.0,6.0,,PPML (需R/Stata),,,0,0,3,1,not_estimated
+D12_PPML_patent_apply_total,2017-2022,patent_apply_total,manufacturing_post2021,,,,25831.0,5262.0,6.0,,PPML (需R/Stata),,,0,0,3,1,not_estimated
+D12_PPML_patent_grant_total,2017-2022,patent_grant_total,manufacturing_post2021,,,,25831.0,5262.0,6.0,,PPML (需R/Stata),,,0,0,3,1,not_estimated

@@ -1,0 +1,9 @@
+﻿dependent,variable,coef,se,p_value,nobs
+eff_invention_apply_rd_10k,treat_2021_2022,0.2379,0.0584,0.0,36605
+eff_invention_apply_rd_10k,treat_2023_2024,0.4326,0.0699,0.0,36605
+eff_invention_grant_rd_10k,treat_2021_2022,0.2679,0.058,0.0,36605
+eff_invention_grant_rd_10k,treat_2023_2024,0.4887,0.0704,0.0,36605
+ln_invention_apply,treat_2021_2022,-0.0285,0.0234,0.2243,36605
+ln_invention_apply,treat_2023_2024,-0.0497,0.0286,0.0822,36605
+ln_rd_expense_10k,treat_2021_2022,-0.2649,0.0538,0.0,36605
+ln_rd_expense_10k,treat_2023_2024,-0.4735,0.0651,0.0,36605

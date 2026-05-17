@@ -1,0 +1,5 @@
+﻿dependent,coef,se,p_value,nobs,firms,r2
+ln_invention_apply,-0.0195,0.0246,0.4273,25831,5262,-0.0268
+ln_invention_grant,-0.0098,0.0229,0.6677,25831,5262,-0.0017
+ln_patent_apply_total,0.0018,0.0339,0.9571,25831,5262,-0.0161
+ln_patent_grant_total,0.0355,0.0359,0.3225,25831,5262,-0.0626

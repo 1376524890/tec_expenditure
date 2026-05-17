@@ -1,0 +1,5 @@
+﻿dependent,coef,se,p_value,nobs
+asinh_apply_per_rd,-0.0,0.0,0.0175,22906
+asinh_grant_per_rd,-0.0,0.0,0.4014,22906
+asinh_apply_per_staff,0.0003,0.0012,0.8231,21989
+asinh_grant_per_staff,0.0005,0.0006,0.4603,21989

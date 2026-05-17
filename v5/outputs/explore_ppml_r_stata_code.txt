@@ -1,0 +1,55 @@
+
+================================================================================
+PPML invention_apply (N=25,831)
+================================================================================
+
+# R: fixest::fepois
+library(fixest)
+m <- fepois(invention_apply ~ manufacturing_post2021 + ln_assets + roa + cashflow_ratio + firm_age | stock_code + year, cluster=~stock_code, data=df_2017_2022)
+summary(m)
+
+
+* Stata: ppmlhdfe
+* ppmlhdfe invention_apply manufacturing_post2021 ln_assets roa cashflow_ratio firm_age, absorb(stock_code year) cluster(stock_code)
+
+
+================================================================================
+PPML invention_grant (N=25,831)
+================================================================================
+
+# R: fixest::fepois
+library(fixest)
+m <- fepois(invention_grant ~ manufacturing_post2021 + ln_assets + roa + cashflow_ratio + firm_age | stock_code + year, cluster=~stock_code, data=df_2017_2022)
+summary(m)
+
+
+* Stata: ppmlhdfe
+* ppmlhdfe invention_grant manufacturing_post2021 ln_assets roa cashflow_ratio firm_age, absorb(stock_code year) cluster(stock_code)
+
+
+================================================================================
+PPML patent_apply_total (N=25,831)
+================================================================================
+
+# R: fixest::fepois
+library(fixest)
+m <- fepois(patent_apply_total ~ manufacturing_post2021 + ln_assets + roa + cashflow_ratio + firm_age | stock_code + year, cluster=~stock_code, data=df_2017_2022)
+summary(m)
+
+
+* Stata: ppmlhdfe
+* ppmlhdfe patent_apply_total manufacturing_post2021 ln_assets roa cashflow_ratio firm_age, absorb(stock_code year) cluster(stock_code)
+
+
+================================================================================
+PPML patent_grant_total (N=25,831)
+================================================================================
+
+# R: fixest::fepois
+library(fixest)
+m <- fepois(patent_grant_total ~ manufacturing_post2021 + ln_assets + roa + cashflow_ratio + firm_age | stock_code + year, cluster=~stock_code, data=df_2017_2022)
+summary(m)
+
+
+* Stata: ppmlhdfe
+* ppmlhdfe patent_grant_total manufacturing_post2021 ln_assets roa cashflow_ratio firm_age, absorb(stock_code year) cluster(stock_code)

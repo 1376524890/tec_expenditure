@@ -1,0 +1,25 @@
+dependent,fe_spec,coef,se,p,N,firms,absorbed,error
+eff_apply_rd_10k,Firm+Year,0.2636142355107488,0.061933203103535076,2.0863897802758657e-05,25831,5262,False,
+eff_apply_rd_10k,Firm+Year+Prov×Year,0.2558789667650438,0.06384450439277504,6.149281522516148e-05,25831,5262,False,
+eff_apply_rd_10k,Firm+Year+Ind×Year,,,,25831,0,False,exog does not have full column rank. If you wish to proceed with model estimatio
+eff_apply_rd_10k,Firm+Year+Prov×Year+Ind×Year,,,,25831,0,False,exog does not have full column rank. If you wish to proceed with model estimatio
+eff_grant_rd_10k,Firm+Year,0.27193316975603493,0.06170641372316578,1.0539761363670408e-05,25831,5262,False,
+eff_grant_rd_10k,Firm+Year+Prov×Year,0.28655545597365567,0.06373417316662584,6.959142845985866e-06,25831,5262,False,
+eff_grant_rd_10k,Firm+Year+Ind×Year,,,,25831,0,False,exog does not have full column rank. If you wish to proceed with model estimatio
+eff_grant_rd_10k,Firm+Year+Prov×Year+Ind×Year,,,,25831,0,False,exog does not have full column rank. If you wish to proceed with model estimatio
+eff_apply_staff,Firm+Year,0.1716747751656149,0.05029638870442837,0.0006431384149159225,25831,5262,False,
+eff_apply_staff,Firm+Year+Prov×Year,0.1607481872639974,0.05158166694665129,0.001833391967830389,25831,5262,False,
+eff_apply_staff,Firm+Year+Ind×Year,,,,25831,0,False,exog does not have full column rank. If you wish to proceed with model estimatio
+eff_apply_staff,Firm+Year+Prov×Year+Ind×Year,,,,25831,0,False,exog does not have full column rank. If you wish to proceed with model estimatio
+eff_grant_staff,Firm+Year,0.1799937094109011,0.04974176454878708,0.0002969536749852786,25831,5262,False,
+eff_grant_staff,Firm+Year+Prov×Year,0.1914246764726094,0.05119494456106462,0.0001851616128523137,25831,5262,False,
+eff_grant_staff,Firm+Year+Ind×Year,,,,25831,0,False,exog does not have full column rank. If you wish to proceed with model estimatio
+eff_grant_staff,Firm+Year+Prov×Year+Ind×Year,,,,25831,0,False,exog does not have full column rank. If you wish to proceed with model estimatio
+ln_rd_expense,Firm+Year,-0.7798049204549191,0.1227582980315909,2.1648061121481987e-10,25831,5262,False,
+ln_rd_expense,Firm+Year+Prov×Year,-0.8027507041175018,0.12721459213870492,2.843985047462638e-10,25831,5262,False,
+ln_rd_expense,Firm+Year+Ind×Year,,,,25831,0,False,exog does not have full column rank. If you wish to proceed with model estimatio
+ln_rd_expense,Firm+Year+Prov×Year+Ind×Year,,,,25831,0,False,exog does not have full column rank. If you wish to proceed with model estimatio
+ln_rd_staff,Firm+Year,-0.1971490322467558,0.044312846902333995,8.671298540763317e-06,25831,5262,False,
+ln_rd_staff,Firm+Year+Prov×Year,-0.1968890909422285,0.045164077498437115,1.310474572924214e-05,25831,5262,False,
+ln_rd_staff,Firm+Year+Ind×Year,,,,25831,0,False,exog does not have full column rank. If you wish to proceed with model estimatio
+ln_rd_staff,Firm+Year+Prov×Year+Ind×Year,,,,25831,0,False,exog does not have full column rank. If you wish to proceed with model estimatio
