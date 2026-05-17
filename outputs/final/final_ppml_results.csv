@@ -1,0 +1,5 @@
+﻿model,dependent,variable,coef,std_err,p_value,nobs,firms,years,r2_within,engine
+M4a_PPML_Invention_Apply,invention_apply,manufacturing_post2021,,,,25831,5262,6,,PPML (需 R fixest 或 Stata ppmlhdfe)
+M4b_PPML_Invention_Grant,invention_grant,manufacturing_post2021,,,,25831,5262,6,,PPML (需 R fixest 或 Stata ppmlhdfe)
+M4c_PPML_Patent_Apply,patent_apply_total,manufacturing_post2021,,,,25831,5262,6,,PPML (需 R fixest 或 Stata ppmlhdfe)
+M4d_PPML_Patent_Grant,patent_grant_total,manufacturing_post2021,,,,25831,5262,6,,PPML (需 R fixest 或 Stata ppmlhdfe)

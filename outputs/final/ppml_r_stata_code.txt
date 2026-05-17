@@ -1,0 +1,99 @@
+
+====================================================================================================
+M4a_PPML_Invention_Apply: PPML invention_apply
+R code:
+
+# R code for M4a_PPML_Invention_Apply
+library(fixest)
+df <- read.csv("data/firm_panel_v4.csv")
+df_2017_2022 <- subset(df, year >= 2017 & year <= 2022)
+
+m_M4a_PPML_Invention_Apply <- fepois(
+  invention_apply ~ manufacturing_post2021 + ln_assets + roa + cashflow_ratio + firm_age | stock_code + year,
+  cluster = ~ stock_code,
+  data = df_2017_2022
+)
+summary(m_M4a_PPML_Invention_Apply)
+
+
+Stata code:
+
+* Stata code for M4a_PPML_Invention_Apply
+* import delimited data/firm_panel_v4.csv
+* keep if year >= 2017 & year <= 2022
+* ppmlhdfe invention_apply manufacturing_post2021 ln_assets roa cashflow_ratio firm_age, absorb(stock_code year) cluster(stock_code)
+
+
+====================================================================================================
+M4b_PPML_Invention_Grant: PPML invention_grant
+R code:
+
+# R code for M4b_PPML_Invention_Grant
+library(fixest)
+df <- read.csv("data/firm_panel_v4.csv")
+df_2017_2022 <- subset(df, year >= 2017 & year <= 2022)
+
+m_M4b_PPML_Invention_Grant <- fepois(
+  invention_grant ~ manufacturing_post2021 + ln_assets + roa + cashflow_ratio + firm_age | stock_code + year,
+  cluster = ~ stock_code,
+  data = df_2017_2022
+)
+summary(m_M4b_PPML_Invention_Grant)
+
+
+Stata code:
+
+* Stata code for M4b_PPML_Invention_Grant
+* import delimited data/firm_panel_v4.csv
+* keep if year >= 2017 & year <= 2022
+* ppmlhdfe invention_grant manufacturing_post2021 ln_assets roa cashflow_ratio firm_age, absorb(stock_code year) cluster(stock_code)
+
+
+====================================================================================================
+M4c_PPML_Patent_Apply: PPML patent_apply_total
+R code:
+
+# R code for M4c_PPML_Patent_Apply
+library(fixest)
+df <- read.csv("data/firm_panel_v4.csv")
+df_2017_2022 <- subset(df, year >= 2017 & year <= 2022)
+
+m_M4c_PPML_Patent_Apply <- fepois(
+  patent_apply_total ~ manufacturing_post2021 + ln_assets + roa + cashflow_ratio + firm_age | stock_code + year,
+  cluster = ~ stock_code,
+  data = df_2017_2022
+)
+summary(m_M4c_PPML_Patent_Apply)
+
+
+Stata code:
+
+* Stata code for M4c_PPML_Patent_Apply
+* import delimited data/firm_panel_v4.csv
+* keep if year >= 2017 & year <= 2022
+* ppmlhdfe patent_apply_total manufacturing_post2021 ln_assets roa cashflow_ratio firm_age, absorb(stock_code year) cluster(stock_code)
+
+
+====================================================================================================
+M4d_PPML_Patent_Grant: PPML patent_grant_total
+R code:
+
+# R code for M4d_PPML_Patent_Grant
+library(fixest)
+df <- read.csv("data/firm_panel_v4.csv")
+df_2017_2022 <- subset(df, year >= 2017 & year <= 2022)
+
+m_M4d_PPML_Patent_Grant <- fepois(
+  patent_grant_total ~ manufacturing_post2021 + ln_assets + roa + cashflow_ratio + firm_age | stock_code + year,
+  cluster = ~ stock_code,
+  data = df_2017_2022
+)
+summary(m_M4d_PPML_Patent_Grant)
+
+
+Stata code:
+
+* Stata code for M4d_PPML_Patent_Grant
+* import delimited data/firm_panel_v4.csv
+* keep if year >= 2017 & year <= 2022
+* ppmlhdfe patent_grant_total manufacturing_post2021 ln_assets roa cashflow_ratio firm_age, absorb(stock_code year) cluster(stock_code)
