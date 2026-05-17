@@ -1,0 +1,31 @@
+# ============================================================
+# 研发费用加计扣除政策实证分析 — 依赖清单
+# Python >= 3.12
+# 安装: uv pip install -r requirements.txt
+# ============================================================
+
+# ---- 核心数据分析与计量 ----
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+linearmodels>=5.0          # 面板固定效应模型 (PanelOLS)
+statsmodels>=0.14          # 补充计量方法
+
+# ---- 可视化 ----
+matplotlib>=3.7            # 所有图表生成
+
+# ---- Word 文档生成 ----
+python-docx>=1.0           # .docx 论文排版
+lxml>=5.0                  # python-docx XML 处理依赖
+
+# ---- Jupyter Notebook（可选）----
+jupyter>=1.0               # 运行 .ipynb
+ipykernel>=6.0             # notebook kernel
+
+# ---- 数据采集脚本（可选，非核心分析必需）----
+# playwright>=1.40         # collect_rd_playwright.py 网页数据采集
+# openpyxl>=3.1            # Excel 读写（辅助数据处理）
+# pillow>=10.0             # 图像处理（辅助）
+
+# ---- 以下为项目实际使用但来自标准库，无需安装 ----
+# os, sys, re, json, copy, datetime, pathlib, subprocess, time, typing, warnings, asyncio
