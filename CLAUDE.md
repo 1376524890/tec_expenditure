@@ -20,37 +20,46 @@ uv run python merge_final_v3.py
 # Compile provincial R&D expenditure data into provincial panel
 uv run python compile_rd_data.py
 
-# Run all econometric models (DID, mechanism, robustness, event study, PPML)
+# Run all econometric models (DID, mechanism, robustness, event study, PPML) — legacy v3
 uv run python run_models_final.py
+
+# Run v8 focus analysis (efficiency主线: DID → 异质性 → 稳健性 → 图表 → 报告)
+uv run python run_focus_analysis.py
 ```
 
-## Architecture & Data Flow (v3 — current)
+## Architecture & Data Flow (v8 — current)
 
 ```
 Raw CSMAR data (data/_extract/, 8 tables)
     │
     ├── merge_final_v3.py ──► data/firm_panel_v3.csv     (5,407 firms × 2017-2022 benchmark)
     │
+    ├── merge_final_v4.py ──► data/firm_panel_v4.csv     (+省级财政科技支出, 46,705 obs)
+    │
     └── compile_rd_data.py ──► data/provincial_panel_full.csv  (31 provinces × 2011-2024)
                                       │
                                       ▼
-                           run_models_final.py
+                           run_focus_analysis.py (v8)
                                       │
                                       ▼
-                              outputs/final/
-                              ├── final_data_audit.md
-                              ├── final_baseline_results.csv
-                              ├── final_mechanism_results.csv
-                              ├── final_robustness_results.csv
-                              ├── final_placebo_results.csv
-                              ├── final_event_study.csv
-                              ├── final_ppml_results.csv
-                              └── final_empirical_report.md
+                              outputs/focus_*.csv + outputs/figures/focus_*.png/pdf
+                              v8/outputs/  (完整归档)
 ```
+
+**Current research focus (v8)**: 研发费用加计扣除政策、研发投入调整与企业创新效率
+- Core narrative: policy didn't increase patent quantity, but manufacturing firms showed relative efficiency gains per unit of R&D input
+- DID(efficiency) ≈ DID(innovation output) − DID(R&D input) = +0.264***
+
+**Active versions**:
+- `v5/` — 14-direction exploratory screening, BH multiple testing, identified innovation efficiency as main thread
+- `v6/` — Innovation efficiency专题分析 (Jupyter + Python)
+- `v8/` — **Current**: Focused analysis with complete empirical pipeline (data audit → DID → heterogeneity → robustness → figures → report)
 
 **Archived versions** (in `archive/`):
 - `archive/v1/` — Original pipeline (1,666 firms × 2019-2024, `patent_stock` outcome)
 - `archive/v2/` — First rebuild (broad time range, `invention_apply` outcome)
+
+**Version history**: v1-v2 (archived) → v3 (8表合并) → v4 (+省级数据) → v5 (14方向筛选) → v6 (效率专题) → v7 (efficiency脚本) → **v8 (聚焦分析, current)**
 
 **Web scraping scripts** (data acquisition, not part of the main pipeline):
 - `collect_rd_playwright.py` — Playwright-based scraping of NBS data browser and statistical yearbooks for provincial R&D data
@@ -58,8 +67,19 @@ Raw CSMAR data (data/_extract/, 8 tables)
 - `search_library.py` — Uses `browser-use` with CDP to search library databases (CSMAR, CNRDS, etc.)
 - `interactive_browser.py` — Opens a visible Playwright browser to explore statistical yearbook pages interactively
 
-## Econometric Design (run_models_final.py)
+## Econometric Design
 
+### V8 (current): run_focus_analysis.py
+- **Core DID specification**: `Y ~ manufacturing_post2021 + controls + firm FE + year FE`, clustered SE by firm
+- **Research question**: Does the 2021 R&D super-deduction policy affect R&D input adjustment and relative innovation efficiency?
+- **Key outcome variables**: Innovation quantity (ln_invention_apply/grant), R&D inputs (ln_rd_expense_10k, rd_intensity_01, ln_rd_staff), Innovation efficiency (eff = ln(patent) - ln(R&D input))
+- **Decomposition**: DID(efficiency) ≈ DID(innovation output) − DID(R&D input)
+- **Heterogeneity**: High pre-R&D intensity, within-manufacturing exposure, ownership (SOE vs private), policy exposure intensity
+- **Robustness**: Unit robustness, asinh ratio-type alternatives, stronger FE (Prov×Year), placebo (2019/2020), event study (baseline=2020)
+- **Key finding**: Innovation quantity DID not significant; R&D input DID significantly negative; Efficiency DID significantly positive (+0.264***)
+- **Important caveat**: Event study shows pre-trends violation for R&D inputs; efficiency results expressed as "relative improvement" not causal effect
+
+### V3 (legacy): run_models_final.py
 - **Core DID specification**: `ln_invention_apply ~ manufacturing_post2021 + controls + firm FE + year FE`, clustered SE by firm
 - **Treatment group**: manufacturing firms (`manufacturing=1`), **control group**: non-manufacturing
 - **Policy shock**: post-2021 (100% super-deduction for manufacturing)
