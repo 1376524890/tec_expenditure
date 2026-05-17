@@ -7,7 +7,10 @@
       "WebFetch(domain:www.stats.gov.cn)",
       "WebFetch(domain:www.zgtjnj.org)",
       "WebFetch(domain:www.tjnj.net)",
-      "WebFetch(domain:library.bnuzh.edu.cn)"
+      "WebFetch(domain:library.bnuzh.edu.cn)",
+      "Bash(python3 *)",
+      "Bash(fc-list :lang=zh)",
+      "Bash(fc-list)"
     ]
   }
 }
